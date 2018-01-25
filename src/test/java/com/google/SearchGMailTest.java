@@ -46,34 +46,17 @@ public class SearchGMailTest extends WebDriverTestBase {
         linkField = driver.findElement(linkLocator);
         Assert.assertTrue(linkField.getText().contains(searchData));
         linkField.click();
-        /*buttonLogin = (new WebDriverWait(driver,20)).
-                until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#gb_70")));*/
+
     }
     @Test
     public void searchGooglePageObjectTest(){
         driver.get("https://www.google.com/intl/ru/gmail/about/");
         GoogleMailLoginPage loginPage = new GoogleMailLoginPage(driver);
         loginPage.findButtonLogin();
-        //buttonLogin = driver.findElement(buttonLoginLocator);
-        //buttonLogin.click();
         GoogleMailEnterLoginPage enterLoginPage = new GoogleMailEnterLoginPage(driver);
         enterLoginPage.forLoginEnter(loginData);
-        /*loginField = driver.findElement(loginFieldLocator);
-        loginField.sendKeys(loginData);
-        loginField.submit();
-        buttonNext = driver.findElement(buttonNextLocator);
-        buttonNext.click();*/
         GoogleMailPasswordPage passwordPage = new GoogleMailPasswordPage(driver);
         passwordPage.forPassword(passwordData);
-        /*passwordField = driver.findElement(passwordFieldLocator);
-        passwordField.sendKeys(passwordData);
-        passwordField.submit();
-        buttonNext2 = driver.findElement(buttonNext2Locator);
-        buttonNext2.click();
-        buttonAccount = driver.findElement(buttonAccountLocator);
-        buttonAccount.click();
-        userName = driver.findElement(userNameLocator);
-        Assert.assertTrue(userName.getText().contains(userCheck));*/
         GoogleMailCheckUserName checkUserName = new GoogleMailCheckUserName(driver);
         checkUserName.forCheckUserName(userCheck);
     }
