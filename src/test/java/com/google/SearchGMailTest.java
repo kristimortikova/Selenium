@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static org.testng.Assert.assertTrue;
 
 public class SearchGMailTest extends WebDriverTestBase {
@@ -49,7 +51,7 @@ public class SearchGMailTest extends WebDriverTestBase {
 
     }
     @Test
-    public void searchGooglePageObjectTest(){
+        public void searchGooglePageObjectTest(){
         driver.get("https://www.google.com/intl/ru/gmail/about/");
         GoogleMailLoginPage loginPage = new GoogleMailLoginPage(driver);
         loginPage.findButtonLogin();
@@ -58,6 +60,6 @@ public class SearchGMailTest extends WebDriverTestBase {
         GoogleMailPasswordPage passwordPage = new GoogleMailPasswordPage(driver);
         passwordPage.forPassword(passwordData);
         GoogleMailCheckUserName checkUserName = new GoogleMailCheckUserName(driver);
-        checkUserName.forCheckUserName(userCheck);
+       checkUserName.forCheckUserName(userCheck);
     }
 }

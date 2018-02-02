@@ -28,16 +28,16 @@ public class SearchGoogleClickTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
-    @Test
-    public void searchGoogleTest(){
-        driver.get("https://www.google.ua");
-        searchField = driver.findElement(searchFieldLocator);
-        searchField.sendKeys(searchData);
-        buttonField = driver.findElement(buttonLocator);
-        buttonField.click();
-        linkField = driver.findElement(linkLocator);
-        assertTrue(linkField.getText().contains(searchData));
-    }
+//    @Test
+//    public void searchGoogleTest(){
+//        driver.get("https://www.google.ua");
+//        searchField = driver.findElement(searchFieldLocator);
+//        searchField.sendKeys(searchData);
+//        buttonField = driver.findElement(buttonLocator);
+//        buttonField.click();
+//        linkField = driver.findElement(linkLocator);
+//        assertTrue(linkField.getText().contains(searchData));
+//    }
 }
 
 

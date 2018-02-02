@@ -16,21 +16,21 @@ public class SearchGoogleTest extends WebDriverTestBase {
     private WebElement linkField;
     private String searchData = "Selenium";
 
-    @Test
-    public void searchGoogleTest(){
-        driver.get("https://www.google.ua");
-        searchField = driver.findElement(searchFieldLocator);
-        searchField.sendKeys(searchData);
-        searchField.submit();
-        linkField = driver.findElement(linkLocator);
-        Assert.assertTrue(linkField.getText().contains(searchData));
-    }
-    @Test
-    public void searchGooglePageObjectTest(){
-        driver.get("https://www.google.ua");
-        GoogleSearchPage searchPage = new GoogleSearchPage(driver);
-        searchPage.searchFor(searchData);
-        GoogleResultPage resultPage = new GoogleResultPage(driver);
-        Assert.assertTrue(resultPage.findLink().getText().contains(searchData));
-    }
+//    @Test
+//    public void searchGoogleTest(){
+//        driver.get("https://www.google.ua");
+//        searchField = driver.findElement(searchFieldLocator);
+//        searchField.sendKeys(searchData);
+//        searchField.submit();
+//        linkField = driver.findElement(linkLocator);
+//        Assert.assertTrue(linkField.getText().contains(searchData));
+//    }
+//    @Test
+//    public void searchGooglePageObjectTest(){
+//        driver.get("https://www.google.ua");
+//        GoogleSearchPage searchPage = new GoogleSearchPage(driver);
+//        searchPage.searchFor(searchData);
+//        GoogleResultPage resultPage = new GoogleResultPage(driver);
+//        Assert.assertTrue(resultPage.findLink().getText().contains(searchData));
+//    }
 }
