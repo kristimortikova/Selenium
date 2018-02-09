@@ -11,9 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
 import java.util.concurrent.TimeUnit;
-
+@Listeners({com.google.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
      private String browser = System.getProperty("browser", "CHROME");
@@ -39,6 +40,6 @@ public class WebDriverTestBase {
     }
     @AfterClass
     public void ternDown(){
-        driver.quit();
+        //driver.quit();
     }
 }

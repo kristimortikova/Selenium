@@ -3,16 +3,15 @@ package com.google.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 public class GoogleMailLoginPage {
-    private WebDriver driver;
-    private By buttonLoginLocator = By.cssSelector("body > nav > div > a.gmail-nav__nav-link.gmail-nav__nav-link__sign-in");
+    @FindBy(how = How.XPATH, using = "/html/body/nav/div/a[2]")
     private WebElement buttonLogin;
-    public GoogleMailLoginPage(WebDriver driver){
-        this.driver = driver;
-    }
+
     public void findButtonLogin(){
-        buttonLogin = driver.findElement(buttonLoginLocator);
+
         buttonLogin.click();
 
     }
