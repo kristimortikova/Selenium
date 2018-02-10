@@ -13,13 +13,13 @@ public class GoogleMailCheckUserName {
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"gb\"]/div[1]/div[1]/div[2]/div[5]/div[1]/a/span")
     private WebElement buttonAccount;
-    @FindBy(how = How.XPATH, using = "/*[@id=\"gb\"]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div/div[1]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gb\"]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/div/div[1]")
     private WebElement userName;
-    private String userCheck = "Мортикова";
+    private String userCheck = "Кристина Мортикова";
 
-    public void forCheckUserName(String userCheck){
-
+    public String forCheckUserName(String userCheck){
         buttonAccount.click();
         Assert.assertTrue(userName.getText().contains(userCheck));
+        return userCheck;
     }
 }

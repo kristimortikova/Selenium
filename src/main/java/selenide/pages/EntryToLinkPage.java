@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class EntryToLinkPage {
-    private SelenideElement rememberMeButton =$(By.xpath("//*[@id=\"remember-login-label\"]"));
-    private SelenideElement buttonLogin = $(By.xpath("//*[@id=\"login-btn\"]"));
+    private SelenideElement rememberMeButton =$(By.id("login-remember"));
+    private SelenideElement buttonLogin = $(By.id("login-submit"));
     public void rememberAndEntry (){
         rememberMeButton.click();
         buttonLogin.click();

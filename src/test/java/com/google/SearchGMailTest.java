@@ -2,10 +2,8 @@ package com.google;
 
 import com.google.core.WebDriverTestBase;
 import com.google.pages.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import com.google.pages.UserData.DataLogin;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -13,11 +11,10 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.testng.Assert.assertTrue;
 
 public class SearchGMailTest extends WebDriverTestBase {
-
     private String searchData = "Gmail";
-    private String loginData = "***********";
-    private String passwordData = "*************";
-    private String userCheck = "Мортикова";
+    private String userCheck = "Кристина Мортикова";
+    private String login;
+    private String password;
 
 
     @Test
@@ -27,9 +24,11 @@ public class SearchGMailTest extends WebDriverTestBase {
         loginPage.findButtonLogin();
 
         GoogleMailEnterLoginPage enterLoginPage = PageFactory.initElements(driver,GoogleMailEnterLoginPage.class);
-        enterLoginPage.forLoginEnter(loginData);
+        DataLogin dataLogin = new DataLogin();
+        enterLoginPage.forLoginEnter(dataLogin.info(login));
         GoogleMailPasswordPage passwordPage = PageFactory.initElements(driver,GoogleMailPasswordPage.class);
-        passwordPage.forPassword(passwordData);
+
+        passwordPage.forPassword(dataLogin.infoPass(password));
         GoogleMailCheckUserName checkUserName = PageFactory.initElements(driver,GoogleMailCheckUserName.class);
         checkUserName.forCheckUserName(userCheck);
     }

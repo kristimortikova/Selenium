@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class LoginLearningplatformPage {
     private WebDriver driver;
-    private By searchLoginField = By.xpath("//*[@id=\"username\"]");
+    private By searchLoginField = By.id("login-email");
     private WebElement loginField;
     private String login = "shiosaky@gmail.com.oe";
     public LoginLearningplatformPage(WebDriver driver){

@@ -1,7 +1,6 @@
 package com.google.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import com.google.pages.UserData.DataLogin;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -12,10 +11,11 @@ public class GoogleMailEnterLoginPage {
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"identifierNext\"]/content/span")
     private WebElement buttonNext;
-    private String loginData = "****************";
+    //private String login = "kristimortikova@gmail.com";
 
-    public void forLoginEnter(String loginData){
-        loginField.sendKeys(loginData);
+    public void forLoginEnter(String login){
+        DataLogin dataLogin = new DataLogin();
+        loginField.sendKeys(dataLogin.info(login));
         loginField.submit();
         buttonNext.click();
 

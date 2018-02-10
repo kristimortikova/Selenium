@@ -7,9 +7,9 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class EnterLoginAndPassPage {
-    private SelenideElement loginField = $(By.xpath("//*[@id=\"username\"]"));
+    private SelenideElement loginField = $(By.id("login-email"));
     private String login = "shiosaky@gmail.com.oe";
-    private SelenideElement passField = $(By.xpath("//*[@id=\"password\"]"));
+    private SelenideElement passField = $(By.id("login-password"));
     private String password = "123456";
 
     public void loginEnter(String login){

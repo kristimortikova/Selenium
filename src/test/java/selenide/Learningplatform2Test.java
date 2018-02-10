@@ -17,7 +17,7 @@ public class Learningplatform2Test extends SelenideTestBase{
     public void platformTest(){
         open("https://learningplatform.stg.openenglish.com/login.html");
         OpenLearningLinkPage openPage = new OpenLearningLinkPage();
-        openPage.closeBunner();
+        //openPage.closeBunner();
         EnterLoginAndPassPage loginAndPass = new EnterLoginAndPassPage();
         loginAndPass.loginEnter(login);
         loginAndPass.passwordEnter(password);
@@ -25,5 +25,6 @@ public class Learningplatform2Test extends SelenideTestBase{
         entryToLinkPage.rememberAndEntry();
         ExitAccountPage exitAccountPage = new ExitAccountPage();
         exitAccountPage.exit();
+        exitAccountPage.checkRememberName();
     }
 }

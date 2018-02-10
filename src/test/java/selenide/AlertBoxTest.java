@@ -19,7 +19,5 @@ public class AlertBoxTest extends SelenideTestBase {
         $(By.xpath("html/body/button")).click();
         switchTo().alert().dismiss();
         $(By.id("demo")).shouldHave(text(canceled));
-
     }
-
 }

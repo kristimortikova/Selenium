@@ -23,8 +23,7 @@ public class SelectTest extends WebDriverTestBase {
         driver.findElement(By.cssSelector("select option[value='audi']")).click();
         Assert.assertTrue(driver.findElement(By.cssSelector("select option[value='audi']")).getText().contains("Audi"));
         selectObject.selectByIndex(3);
-        selectObject.selectByValue("volvo");
-        selectObject.selectByVisibleText("Audi");
+        selectObject.selectByValue("audi");
         List <WebElement> allSelectOptions = selectObject.getAllSelectedOptions();
         WebElement firstSelectedOption = selectObject.getFirstSelectedOption();
         List <WebElement> allAvailableOptions = selectObject.getOptions();
