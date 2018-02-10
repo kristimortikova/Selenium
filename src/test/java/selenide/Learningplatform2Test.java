@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class Learningplatform2Test extends SelenideTestBase{
     private String login = "shiosaky@gmail.com.oe";
     private String password = "123456";
-    @Test
+    @Test (enabled = false)
     public void platformTest(){
         open("https://learningplatform.stg.openenglish.com/login.html");
         OpenLearningLinkPage openPage = new OpenLearningLinkPage();

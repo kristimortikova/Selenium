@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class LearningplatformTest extends WebDriverTestBase{
     //private String login = "shiosaky@gmail.com.oe";
 
-    @Test
+    @Test (enabled = false)
     public void platformPageObjectTest(){
        driver.get("https://learningplatform.stg.openenglish.com/");
         //OpenLearningplatformPage openPage = new OpenLearningplatformPage(driver);

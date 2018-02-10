@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Learningplatform3Test extends SelenideTestBase {
 
-    @Test
+    @Test (enabled = false)
     public void closeBunnerTest(){
         open("https://learningplatform.stg.openenglish.com/login.html");
         OpenLearningLinkPage openLinkAndCloseBunner = new OpenLearningLinkPage();
