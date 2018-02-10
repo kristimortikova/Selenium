@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 
 public class LearningplatformTest extends WebDriverTestBase{
     //private String login = "shiosaky@gmail.com.oe";
-
-    @Test (enabled = false)
+/*
+    @Test
     public void platformPageObjectTest(){
        driver.get("https://learningplatform.stg.openenglish.com/");
         //OpenLearningplatformPage openPage = new OpenLearningplatformPage(driver);
@@ -25,6 +25,6 @@ public class LearningplatformTest extends WebDriverTestBase{
         DropDownPage dropDownPage = PageFactory.initElements(driver, DropDownPage.class);
         dropDownPage.searchUser();
         dropDownPage.checkUserName();
-    }
+    }*/
 
 }
