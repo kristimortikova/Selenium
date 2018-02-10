@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class ActionsTest extends WebDriverTestBase {
-    @Test
+    @Test(enabled = false)
     public void dragAnd(){
         driver.get("https://gojs.net/latest/samples/htmlDragDrop.html?gclid=CLjWnLeG5tQCFUeVGwodCowEcA");
         WebElement fromElem = driver.findElement(By.xpath("//*[@id=\"sample\"]/div[1]/span[1]/div/div[2]"));

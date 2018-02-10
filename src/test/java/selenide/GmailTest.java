@@ -16,7 +16,7 @@ public class GmailTest extends SelenideTestBase {
     private String loginData = "kristimortikova@gmail.com";
     private String passData = "dkglkagl";
 
-    @Test
+    @Test(enabled = false)
     public void gMailSelenideTest() {
         ChromeDriverManager.getInstance().setup();
         open("https://www.google.com/intl/ru/gmail/about/");

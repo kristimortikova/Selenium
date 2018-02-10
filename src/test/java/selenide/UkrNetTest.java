@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class UkrNetTest extends SelenideTestBase{
     private String loginUkrNet="user1401@ukr.net";
     private String passUkrNet = "12345qwerty";
-    @Test
+    @Test(enabled = false)
     public void ukrNetTest(){
         open("https://www.ukr.net/");
         UkrNetLoginPage ukrNetLoginPage = new UkrNetLoginPage();

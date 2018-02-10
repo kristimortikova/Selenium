@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.switchTo;
 public class AlertBoxTest extends SelenideTestBase {
     private String alertExample = "https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm";
     private String canceled = "You pressed Cancel!";
-    @Test
+    @Test(enabled = false)
     public void alertInSelenideTest(){
         open(alertExample);
         switchTo().frame("iframeResult");

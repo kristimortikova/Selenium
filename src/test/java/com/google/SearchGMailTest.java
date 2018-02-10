@@ -17,7 +17,7 @@ public class SearchGMailTest extends WebDriverTestBase {
     private String password;
 
 
-    @Test
+    @Test(enabled = false)
         public void searchGooglePageObjectTest(){
         driver.get("https://www.google.com/intl/ru/gmail/about/");
         GoogleMailLoginPage loginPage = PageFactory.initElements(driver, GoogleMailLoginPage.class);

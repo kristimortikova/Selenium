@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 @Listeners({com.google.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
-     private String browser = System.getProperty("browser", "CHROME");
+    private String browser = System.getProperty("browser", "CHROME");
     WebDriverManager manager;
     @BeforeClass
     public void setUp() {
@@ -40,6 +40,6 @@ public class WebDriverTestBase {
     }
     @AfterClass
     public void ternDown(){
-        //driver.quit();
+        driver.quit();
     }
 }

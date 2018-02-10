@@ -27,6 +27,6 @@ public class SelenideTestBase {
     }
     @AfterClass
     public void tearRunner(){
-       // WebDriverRunner.getWebDriver().quit();
+       WebDriverRunner.getWebDriver().quit();
     }
 }
