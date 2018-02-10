@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 
 public class SearchGMailTest extends WebDriverTestBase {
     private String searchData = "Gmail";
-    private String userCheck = "Кристина Мортикова";
+    private String userCheck = "Kristina Mortikova";
     private String login;
     private String password;
 

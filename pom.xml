@@ -7,18 +7,7 @@
     <groupId>e2e-selenium</groupId>
     <artifactId>e2e-selenium</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
     <properties>
         <junit.version>4.12</junit.version>
         <selenium.version>3.8.1</selenium.version>
