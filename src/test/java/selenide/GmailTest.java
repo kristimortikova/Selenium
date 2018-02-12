@@ -13,8 +13,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class GmailTest extends SelenideTestBase {
-    private String loginData = "kristimortikova@gmail.com";
-    private String passData = "dkglkagl";
+    private String loginData = "usermortikova@gmail.com";
+    private String passData = "321qwe321";
 
     @Test(enabled = false)
     public void gMailSelenideTest() {
