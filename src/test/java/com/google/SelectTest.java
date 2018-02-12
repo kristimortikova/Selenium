@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class SelectTest extends WebDriverTestBase {
-    WebElement selElem;
+    private WebElement selElem;
     @Test
     public void carTest(){
         driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select");
