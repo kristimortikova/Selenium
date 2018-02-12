@@ -31,7 +31,7 @@ public class SearchGoogleClickTest extends WebDriverTestBase {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }*/
 
-    @Test
+    @Test(enabled = false)
     public void searchGoogleTest(){
         driver.get("https://www.google.ua");
         searchField = driver.findElement(searchFieldLocator);

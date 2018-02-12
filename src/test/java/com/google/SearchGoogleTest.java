@@ -16,7 +16,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
     private WebElement linkField;
     private String searchData = "Selenium";
 
-    @Test
+    @Test(enabled = false)
     public void searchGooglePageObjectTest(){
         driver.get("https://www.google.ua");
         GoogleSearchPage page = PageFactory.initElements(driver,GoogleSearchPage.class);
