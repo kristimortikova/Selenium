@@ -1,12 +1,14 @@
 package com.google;
 
 import com.google.core.WebDriverTestBase;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AlertTest extends WebDriverTestBase {
+    @Description ("annotation")
     @Test
     public void alertBoxTest(){
         driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm");
