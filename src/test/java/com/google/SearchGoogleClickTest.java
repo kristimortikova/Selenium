@@ -22,23 +22,15 @@ public class SearchGoogleClickTest extends WebDriverTestBase {
     private WebElement searchField;
     private WebElement buttonField;
     private String searchData = "UKR.NET";
-    /*
-    @BeforeClass
-    public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }*/
 
     @Test (enabled = false)
     public void searchGoogleTest(){
-        driver.get("https://www.google.ua");
+        /*driver.get("https://www.google.ua");
         searchField = driver.findElement(searchFieldLocator);
         searchField.sendKeys(searchData);
         buttonField = driver.findElement(buttonLocator);
         buttonField.click();
         linkField = driver.findElement(linkLocator);
-        assertTrue(linkField.getText().contains(searchData));
+        assertTrue(linkField.getText().contains(searchData));*/
     }
 }
