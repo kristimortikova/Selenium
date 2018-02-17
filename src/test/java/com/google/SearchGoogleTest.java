@@ -3,6 +3,7 @@ package com.google;
 import com.google.core.WebDriverTestBase;
 import com.google.pages.GoogleResultPage;
 import com.google.pages.GoogleSearchPage;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +17,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
     private WebElement linkField;
     private String searchData = "Selenium";
 
-    @Test(enabled = false)
+    @Test
     public void searchGooglePageObjectTest(){
         driver.get("https://www.google.ua");
         GoogleSearchPage page = PageFactory.initElements(driver,GoogleSearchPage.class);
