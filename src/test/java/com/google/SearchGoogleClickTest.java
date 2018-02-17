@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertTrue;
 
 public class SearchGoogleClickTest extends WebDriverTestBase {
-    //private WebDriver driver;
+    /*private WebDriver driver;
     private By searchFieldLocator = By.xpath("//*[@id=\"lst-ib\"]");
     private By linkLocator = By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/h3/a");
     private By buttonLocator = By.xpath("//*[@id=\"sbtc\"]/div[2]/div[2]/div[1]/div/ul/li[11]/div/span[1]/span/input");
@@ -25,12 +25,12 @@ public class SearchGoogleClickTest extends WebDriverTestBase {
 
     @Test (enabled = false)
     public void searchGoogleTest(){
-        /*driver.get("https://www.google.ua");
+        driver.get("https://www.google.ua");
         searchField = driver.findElement(searchFieldLocator);
         searchField.sendKeys(searchData);
         buttonField = driver.findElement(buttonLocator);
         buttonField.click();
         linkField = driver.findElement(linkLocator);
-        assertTrue(linkField.getText().contains(searchData));*/
-    }
+        assertTrue(linkField.getText().contains(searchData));
+    }*/
 }
