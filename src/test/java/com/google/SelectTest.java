@@ -1,6 +1,8 @@
 package com.google;
 
 import com.google.core.WebDriverTestBase;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,8 +11,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
+@Feature("frame")
+@Story("select ")
 public class SelectTest extends WebDriverTestBase {
+
     private WebElement selElem;
     @Test
     public void carTest(){
